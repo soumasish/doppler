@@ -1,14 +1,13 @@
 package main
 
-import "fmt"
-
+import (
+	"github.com/soumasish/doppler/client/routing"
+)
 func main(){
-	_, err:= createDatabase("firstDatabase", "abc", "cde")
-	fmt.Println(err)
+	routing.RegisterControllers()
 }
 
 func createDatabase(name, username, password string) (int, error){
-	fmt.Println("Creating database ", name, username, password)
-	return 1, nil
+
 }
 
